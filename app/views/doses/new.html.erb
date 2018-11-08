@@ -1,0 +1,10 @@
+<h1>Doses#new</h1>
+<p>Find me in app/views/doses/new.html.erb</p>
+
+<ul>
+  <% @all_ingredients.each do |ingredient| %>
+    <li><%= "#{ingredient.id}. ingredient: #{ingredient.name}" %></li>
+  <% end %>
+</ul>
+
+ <%= render 'form' %>
