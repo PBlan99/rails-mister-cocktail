@@ -31,8 +31,4 @@ class DosesController < ApplicationController
     params.require(:dose).permit(:ingredient_id) # this is called strong params, for security
   end
 
-  # def delete_dose_id_params
-  #   params.require(:dose).permit(:id)
-  # end
-
 end
