@@ -1,11 +1,76 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<!-- <h1>Cocktails#index</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p> -->
 
-<ul>
+
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/assets/banner.jpeg');">
+  <div class="banner-content">
+    <h1>Nick's Cocktails</h1>
+    <p>Clubbing beverages</p>
+    <a class="btn btn-primary btn-lg" href= <%= new_cocktail_path %> >Add a cocktail</a>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/cocktail.jpeg');">
+          <div class="card-description">
+            <h2>Bubu</h2>
+          </div>
+          <a class="card-link" href="/cocktails/1"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/cocktail.jpeg');">
+          <div class="card-description">
+            <h2>Gin Tonic</h2>
+          </div>
+          <a class="card-link" href="/cocktails/2"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/cocktail.jpeg');">
+          <div class="card-description">
+            <h2>TEst</h2>
+          </div>
+          <a class="card-link" href="/cocktails/3"></a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/cocktail.jpeg');">
+          <div class="card-description">
+            <h2><%= "#{cocktail.name}" %></h2>
+          </div>
+          <a class="btn btn-primary btn-lg" href= <%= cocktail_path(cocktail) %> >Recipe</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+<!-- href="/cocktails/1" -->
+
+
+
+<!-- <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= "name: #{cocktail.name}" %></a></li>
     <li><%= link_to "See details", cocktail_path(cocktail) %></li>
   <% end %>
-</ul>
+</ul> -->
 
-<p><%= link_to "Add a cocktail", new_cocktail_path %></p>
+<!-- <p><%= link_to "Add a cocktail", new_cocktail_path %></p> -->
+<!-- this line above is the ruby way of generating a clickable link -->
+<!-- the a anchor, which is what we ended up using above in the banner content, is the html way -->

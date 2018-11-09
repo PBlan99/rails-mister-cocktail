@@ -1,3 +1,5 @@
+
+<!--
 <%= form_for [@cocktail, @dose] do |f| %>
   <%= f.label :ingredient_id,'Ingredient index:' %>
   <%= f.text_field :ingredient_id %>
@@ -6,4 +8,11 @@
   <%= f.text_field :description %>
 
   <%= f.submit %>
+<% end %> -->
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>  <!-- it must automatically add :ingredient_id to params -->
+<!--   <%= f.input :ingredient_id, label: 'Ingredient index:' %> -->
+  <%= f.input :description, label: 'Dose description:' %>
+  <%= f.button :submit %>
 <% end %>
