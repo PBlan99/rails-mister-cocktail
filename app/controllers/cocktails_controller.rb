@@ -23,7 +23,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name) # this is called strong params, for security
+    params.require(:cocktail).permit(:name, :photo) # this is called strong params, for security
   end
 
 end
