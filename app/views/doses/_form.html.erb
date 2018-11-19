@@ -11,7 +11,7 @@
 <% end %> -->
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>  <!-- it must automatically add :ingredient_id to params -->
+  <%= f.association :ingredient %>  <!-- adds :ingredient_id to the dose hash in the params hash -->
 <!--   <%= f.input :ingredient_id, label: 'Ingredient index:' %> -->
   <%= f.input :description, label: 'Dose description:' %>
   <%= f.button :submit %>
