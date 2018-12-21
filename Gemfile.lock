@@ -239,7 +239,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
   byebug
   carrierwave (~> 1.2)
-  cloudinary (~> 1.9.1)
+  cloudinary
   coffee-rails (~> 4.2)
   dotenv-rails
   font-awesome-sass (~> 5.0.9)
