@@ -47,7 +47,7 @@ gem 'simple_form'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'cloudinary'
+gem 'cloudinary', '~> 1.9.1'
 
 gem 'carrierwave', '~> 1.2'
 

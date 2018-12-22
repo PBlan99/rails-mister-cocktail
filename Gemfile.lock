@@ -239,7 +239,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
   byebug
   carrierwave (~> 1.2)
-  cloudinary
+  cloudinary (~> 1.9.1)
   coffee-rails (~> 4.2)
   dotenv-rails
   font-awesome-sass (~> 5.0.9)
@@ -264,4 +264,4 @@ RUBY VERSION
    ruby 2.4.4p296
 
 BUNDLED WITH
-   1.16.5
+   2.0.0.pre.2
